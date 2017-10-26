@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+body{background:#000; color:#FFF; font-size:120px}
+</style>
+<script>
+window.onload=function()
+{
+	function toDou(n){
+		if (n<10)
+		{return '0'+n;}
+		else
+		{return String(n);}
+	}
+	var aImg=document.getElementsByTagName("img");
+	function shi(){
+		var oDate=new Date();
+	var str1=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+	for(var i=0;i<aImg.length;i++)
+	{
+		aImg[i].src='img/'+str1.charAt(i)+'.jpg';
+	}
+		}
+	setInterval(shi,1000);
+	shi();
+};
+</script>
+</head>
+<img src="img/0.jpg">
+<img src="img/0.jpg">
+:
+<img src="img/0.jpg">
+<img src="img/0.jpg">
+:
+<img src="img/0.jpg">
+<img src="img/0.jpg">
+<body>
+
+</body>
+</html>
